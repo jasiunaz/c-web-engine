@@ -1,4 +1,12 @@
 /*
-    C-based blog engine demo
-    © 2022 Edgaras Akinis, Marijonas Grenda, Matas Jasiunas, Joris Lisas
+    c-web-engine
+    © 2022 Edgaras Akinis, Marijonas Grenda, Matas Jasiūnas, Joris Lisas
 */
+
+header .navbar {
+    border-bottom-color: rgba(0, 0, 0, 0.176) !important;
+}
+
+.text-container {
+    max-width: 40em;
+}
