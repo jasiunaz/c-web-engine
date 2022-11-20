@@ -2,9 +2,11 @@
 
 ## Roles
 
-- Architektas
-- Builderis
-- Kritikas
-- Dizaineris
-- Žmogus kuris pristato
-- Fasilitatorius
+### Architects & Builders
+Edgaras Akinis, Joris Lisas
+
+### Critic & Designer
+Matas Jasiūnas
+
+### Exhibitor & Facilitator
+Marijonas Grenda
