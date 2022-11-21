@@ -1,4 +1,9 @@
 #include <stdlib.h>
+#include <stdio.h>
+#include <string.h>
+#include "CrippledMD.h"
+
+
 #define BUFFER_SIZE 1024
 
 int readIntoBuffer(FILE *inFile, FILE *outFile){
