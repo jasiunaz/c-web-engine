@@ -4,7 +4,7 @@
 #include <stdio.h>
 #include <string.h>
 
-#define BUFFER_SIZE 1024
+#define BUFFER_SIZE 100
   
 int parse_md(FILE *inFile, FILE *outFile);
-int readBuffer(FILE *inFile, char *buffer);
+void partial_read_cleanup(FILE *inFile, char *buffer);
