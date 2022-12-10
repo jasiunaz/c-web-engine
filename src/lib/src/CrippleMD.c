@@ -11,7 +11,7 @@ int parse_md(FILE *inFile, FILE *outFile){
     while (elements_read == BUFFER_SIZE){
 	elements_read = fread(buffer, sizeof(char), BUFFER_SIZE, inFile);
 
-	if (*(buffer + BUFFER_SIZE - 1) != ' ' || *(buffer + BUFFER_SIZE - 1) != '\n' && !feof(inFile)){
+	if (*(buffer + BUFFER_SIZE - 1) != ' ' || *(buffer + BUFFER_SIZE - 1) != '\n' && elements_read == BUFFER_SIZE){
 	    partial_read_cleanup(inFile, buffer);
 	}
 	if(elements_read != BUFFER_SIZE){			    // Jeigu paskutinis bufferis, kad no garbage
