@@ -21,7 +21,7 @@ int parse_md(FILE *inFile, FILE *outFile){
 		if (CUR_CHAR == ' '){
 		    blocks[HEADING_INDEX].level -= 1;
 		    fprintf(outFile, "<h%d>", blocks[HEADING_INDEX].level);
-		    blocks[HEADING_INDEX].set = 1; // HAHA BBD NIEKAS CIA NEVEIKS
+		    blocks[HEADING_INDEX].set = 1; 
 		    last_char = CUR_CHAR;
 
 		    sprintf(blocks[HEADING_INDEX].html_close, "</h%d>", blocks[HEADING_INDEX].level);
@@ -103,7 +103,6 @@ void partial_read_cleanup(FILE *inFile, char *buffer){
     }
 
     *(buffer + BUFFER_SIZE - offset) = '\0';			    // Uzbaigia bufferi ties \n arba space
-    
     fseek(inFile, -(offset), SEEK_CUR);				    // Pastumia cursoriu atgal
     return;
 }
