@@ -117,24 +117,24 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named Main
+# Target rules for targets named main.out
 
 # Build rule for target.
-Main: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Main
-.PHONY : Main
+main.out: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 main.out
+.PHONY : main.out
 
 # fast build rule for target.
-Main/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/build
-.PHONY : Main/fast
+main.out/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.out.dir/build.make CMakeFiles/main.out.dir/build
+.PHONY : main.out/fast
 
 CrippleMD.o: CrippleMD.c.o
 .PHONY : CrippleMD.o
 
 # target to build an object file
 CrippleMD.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/CrippleMD.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.out.dir/build.make CMakeFiles/main.out.dir/CrippleMD.c.o
 .PHONY : CrippleMD.c.o
 
 CrippleMD.i: CrippleMD.c.i
@@ -142,7 +142,7 @@ CrippleMD.i: CrippleMD.c.i
 
 # target to preprocess a source file
 CrippleMD.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/CrippleMD.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.out.dir/build.make CMakeFiles/main.out.dir/CrippleMD.c.i
 .PHONY : CrippleMD.c.i
 
 CrippleMD.s: CrippleMD.c.s
@@ -150,7 +150,7 @@ CrippleMD.s: CrippleMD.c.s
 
 # target to generate assembly for a file
 CrippleMD.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/CrippleMD.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.out.dir/build.make CMakeFiles/main.out.dir/CrippleMD.c.s
 .PHONY : CrippleMD.c.s
 
 main.o: main.c.o
@@ -158,7 +158,7 @@ main.o: main.c.o
 
 # target to build an object file
 main.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/main.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.out.dir/build.make CMakeFiles/main.out.dir/main.c.o
 .PHONY : main.c.o
 
 main.i: main.c.i
@@ -166,7 +166,7 @@ main.i: main.c.i
 
 # target to preprocess a source file
 main.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/main.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.out.dir/build.make CMakeFiles/main.out.dir/main.c.i
 .PHONY : main.c.i
 
 main.s: main.c.s
@@ -174,7 +174,7 @@ main.s: main.c.s
 
 # target to generate assembly for a file
 main.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/main.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.out.dir/build.make CMakeFiles/main.out.dir/main.c.s
 .PHONY : main.c.s
 
 # Help Target
@@ -185,7 +185,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... Main"
+	@echo "... main.out"
 	@echo "... CrippleMD.o"
 	@echo "... CrippleMD.i"
 	@echo "... CrippleMD.s"
