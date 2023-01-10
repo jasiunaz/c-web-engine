@@ -1,12 +1,17 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "CrippleMD.h"
+#include "../include/CrippleMD.h"
 
 int main(){
 
-    FILE *inFile = fopen("in.txt", "r");
+    FILE *inFile = fopen("example.md", "r");
     FILE *outFile = stdout;
-    /*FILE *outFile = fopen("out.txt", "w");*/
+    /*FILE *outFile = fopen("out.html", "w");*/
+
+    if (inFile == NULL){
+	printf("No input file\n");
+	return 1;
+    }
 
 
     Metadata *metadata = malloc(sizeof(Metadata));
@@ -16,14 +21,11 @@ int main(){
 	return 1;
     }
 
-    printf("\n[METADATA START]\n");
-    printf("%s\n%s\n%d-%d-%d", metadata->title, metadata->category, metadata->year, metadata->month, metadata->day);
-    printf("\n[METADATA END]\n");
-
-
     parse_md(inFile, outFile);
 
     free(metadata);
+    fclose(inFile);
+    fclose(outFile);
 
     return 0;
 }
