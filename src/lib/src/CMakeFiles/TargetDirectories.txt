@@ -1,3 +1,0 @@
-/home/joris/doc/archive/uni/first_semester/procprog/projects/c-web-engine/src/lib/src/CMakeFiles/main.out.dir
-/home/joris/doc/archive/uni/first_semester/procprog/projects/c-web-engine/src/lib/src/CMakeFiles/edit_cache.dir
-/home/joris/doc/archive/uni/first_semester/procprog/projects/c-web-engine/src/lib/src/CMakeFiles/rebuild_cache.dir
