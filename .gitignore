@@ -33,14 +33,19 @@
 *.out
 *.app
 *.i*86
+Makefile
+
+# C
 *.x86_64
 *.hex
+tags
 
 # Debug files
 *.dSYM/
 *.su
 *.idb
 *.pdb
+.gdb_history
 
 # Kernel Module Compile Results
 *.mod*
@@ -50,3 +55,16 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+
+# CMake
+CMakeLists.txt.user
+CMakeCache.txt
+CMakeFiles
+CMakeScripts
+Testing
+Makefile
+cmake_install.cmake
+install_manifest.txt
+compile_commands.json
+CTestTestfile.cmake
+_deps
