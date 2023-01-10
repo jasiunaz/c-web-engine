@@ -1,3 +1,9 @@
+---
+title:
+category:
+date:
+---
+
 # This is title
 
 This is paragraph
