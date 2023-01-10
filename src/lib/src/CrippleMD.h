@@ -22,7 +22,15 @@ typedef struct Md_block {
     int level;
 } Md_block;
 
-int parse_md_metadata(FILE *inFile, FILE *outFile);
+typedef struct Metadata {
+    char title[256];
+    char category[256];
+    int year;
+    int month;
+    int day;
+} Metadata;
+
+int parse_md_metadata(FILE *inFile, FILE *outFile, Metadata *metadata);
 int parse_md(FILE *inFile, FILE *outFile);
 
 void parse_bold(Md_block *tracker_blocks, FILE *outFile);
@@ -31,7 +39,7 @@ void parse_heading(char current_char, char last_char, Md_block *tracker_blocks, 
 void parse_paragraph(Md_block *tracker_blocks, FILE *outFile);
 void end_all_blocks(char current_char, char last_char, Md_block *tracker_blocks, FILE *outFile);
 
-int read_clean_buffer(FILE *inFIle, char *buffer);
+int read_clean_buffer(FILE *inFile, char *buffer);
 void partial_read_cleanup(FILE *inFile, char *buffer);
 void fill_blocks(Md_block *blocks);
 

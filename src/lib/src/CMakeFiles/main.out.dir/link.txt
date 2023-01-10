@@ -1,0 +1,1 @@
+/usr/bin/cc -g CMakeFiles/main.out.dir/main.c.o CMakeFiles/main.out.dir/CrippleMD.c.o -o main.out 

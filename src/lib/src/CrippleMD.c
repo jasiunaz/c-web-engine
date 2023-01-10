@@ -1,5 +1,55 @@
 #include "CrippleMD.h"
 
+int parse_md_metadata(FILE *inFile, FILE *outFile, Metadata *metadata){
+
+    char *buffer = calloc(BUFFER_SIZE, sizeof(char));
+
+    read_clean_buffer(inFile, buffer);
+
+    if (strstr(buffer, "---") == NULL){
+	return 1;
+    }
+    if (strstr(buffer, "category: ")  == NULL){
+	return 1;
+    }
+    if (strstr(buffer, "title: ")  == NULL){
+	return 1;
+    }
+    if (strstr(buffer, "date: ")  == NULL){
+	return 1;
+    }
+
+    char *title = strstr(buffer, "title: ");
+    title = title + 7;
+
+    char *category = strstr(buffer, "category: ");
+    category = category + 10;
+
+    char *date = strstr(buffer, "date: ");
+    date = date + 6;
+
+    char *ptr = strchr(title, '\n');
+    *ptr = '\0';
+    strncpy(metadata->title, title, 255);
+
+    ptr = strchr(category, '\n');
+    *ptr = '\0';
+    strncpy(metadata->category, category, 255);
+
+    ptr = strchr(date, '\n');
+    *ptr = '\0';
+
+    sscanf(date, "%4d-%2d-%2d", &metadata->year, &metadata->month, &metadata->day);
+
+    char *end = ptr + 5;
+
+    int offset = end - buffer;
+
+    fseek(inFile, offset, SEEK_SET);
+
+    return 0;
+}
+
 int parse_md(FILE *inFile, FILE *outFile){
     char *buffer = calloc(BUFFER_SIZE, sizeof(char));
 
@@ -53,6 +103,9 @@ int parse_md(FILE *inFile, FILE *outFile){
 	    last_char = current_char;
 	}
     }
+
+    free(buffer);
+    free(tracker_blocks);
 
     return 0;
 }
