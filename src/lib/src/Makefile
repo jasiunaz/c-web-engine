@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/joris/doc/uni/procprog/projects/c-web-engine/src/lib/src
+CMAKE_SOURCE_DIR = /home/joris/doc/archive/uni/first_semester/procprog/projects/c-web-engine/src/lib/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/joris/doc/uni/procprog/projects/c-web-engine/src/lib/src
+CMAKE_BINARY_DIR = /home/joris/doc/archive/uni/first_semester/procprog/projects/c-web-engine/src/lib/src
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/joris/doc/uni/procprog/projects/c-web-engine/src/lib/src/CMakeFiles /home/joris/doc/uni/procprog/projects/c-web-engine/src/lib/src//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/joris/doc/archive/uni/first_semester/procprog/projects/c-web-engine/src/lib/src/CMakeFiles /home/joris/doc/archive/uni/first_semester/procprog/projects/c-web-engine/src/lib/src//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/joris/doc/uni/procprog/projects/c-web-engine/src/lib/src/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/joris/doc/archive/uni/first_semester/procprog/projects/c-web-engine/src/lib/src/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
